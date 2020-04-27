@@ -1,0 +1,12 @@
+#Nachfolgend steht eine Liste aller gescannten Produkte#
+20004002
+Milch
+1
+0.73
+7
+
+20004002
+Milch
+1
+0.73
+7
