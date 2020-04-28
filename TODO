@@ -1,0 +1,21 @@
+1) Remove Funktion
+  => copy paste Add Funktion?
+  
+2) Code in Funktionen serperieren:
+
+    
+    Evaluate(userinput): Vergleichen ob Barcode bereits in Data.txt existiert
+                         Barcode als eingabe verlangen
+    Add(code): Quantität +1 ; übernimmt variable code für den Barcode
+    Create(code): Eintrag erstellen; übernimmt variable code für den Barcode
+    Remove(code): Quantität -x (x = 0.25;0.50;0.75 oder 1.00) ; übernimmt variable code für den Barcode
+    
+    
+    
+3) Kochbuch funktion die den inhalt von Data.txt mit den Zutaten aus allen hinterlegten Rezepten vergleicht
+   und die Rezepte ausgibt die mit den vorhandenen produkten hergestellt werden können
+
+4) Slideshow funktion die auf basis der ausgabe der Kochbuchfunktion eine Slideshow mit Bild + Text erzeugt die auf einem Bildschirm angezeigt wird
+   Es soll möglich sein die Slideshow mit verschiedenen texteingaben zu steuern (vor, zurück, pause)
+
+5) slideshow soll im vordergrund laufen während im hintergrund parallel die add/remove/evaluate funktionen ablaufen können
