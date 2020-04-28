@@ -82,7 +82,7 @@ def scan():
                             clone_file.write('\n')
                             clone_file.write(mhdmod)
                             clone_file.write('\n')
-                            clone_file.write('0')
+                            clone_file.write('1')
                             clone_file.write('\n')
                             # schließt data.txt und clone.txt. Alle neuen Daten sind jetzt nur in clone.txt enthalten
 
