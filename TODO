@@ -1,15 +1,5 @@
-1) Remove Funktion
-  => copy paste Add Funktion?
-  
-2) Code in Funktionen serperieren:
-
-    
-    Evaluate(userinput): Vergleichen ob Barcode bereits in Data.txt existiert
-                         Barcode als eingabe verlangen
-    Add(code): Quantität +1 ; übernimmt variable code für den Barcode
-    Create(code): Eintrag erstellen; übernimmt variable code für den Barcode
-    Remove(code): Quantität -x (x = 0.25;0.50;0.75 oder 1.00) ; übernimmt variable code für den Barcode
-    
+1) Merge Funktion die Einträge mit exakt gleichem Namen erkennt und den Code dem ersten eintrag zuweist 
+um gleiche produkte mit anderem code unter dem selben Bestand zu vereinen  
     
     
 3) Kochbuch funktion die den inhalt von Data.txt mit den Zutaten aus allen hinterlegten Rezepten vergleicht
