@@ -1,6 +1,8 @@
 1) Merge Funktion die Einträge mit exakt gleichem Namen erkennt und den Code dem ersten eintrag zuweist 
 um gleiche produkte mit anderem code unter dem selben Bestand zu vereinen  
-    
+
+2) Remove Funktion: Abfrage vorn anstellen nach art: if input('String1/2/3/4') fraction = string else fraction = 1
+    wenn zu kompliziert einfach 2 verschiedene remove funktionen?
     
 3) Kochbuch funktion die den inhalt von Data.txt mit den Zutaten aus allen hinterlegten Rezepten vergleicht
    und die Rezepte ausgibt die mit den vorhandenen produkten hergestellt werden können
