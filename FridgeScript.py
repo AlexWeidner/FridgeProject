@@ -144,18 +144,25 @@ def removeitem(code):
                         a_file.close()
                         print('Anzahl wurde um',fraction,'verringert')
 
-def createingredient(code):
-    #ingredientname = str(input('Name der Zutat? '))
-    
-    #if ingredientcount1 == 1 :
-        #skip
-    #else:
-    #    ingredient1_raw = 
-        
-
 def createrecipe(code):
     i = 1
-    while True:
+    recipe_path = '/home/pi/Desktop//recipe.txt'
+    recipe = recipe_file.read()
+    recipe_file.close()                
+    clone_path = '/home/pi/Desktop//clone.txt'
+    clone_file = open(clone_path,'w')                
+    clone_file.write(recipe)
+    clone_file.write('\n')
+    clone_file.write(code)
+    clone_file.write('\n')
+    clone_file.close()
+    clone_file = open(clone_path,'r')
+    clone = clone_file.read()
+    clone_file.close()                
+    recipe_file = open(recipe_path,'w')
+    recipe_file.write(clone)                
+    clone_file.close()
+    recipe_file.close()
         # solange Zutaten weniger als 10
         if i <= 10 :
             try:
@@ -246,13 +253,13 @@ def main():
         
         if keyboard.is_pressed('1'):
             mode = 1
-        
+            #create/add item
         elif keyboard.is_pressed('2'):
             mode = 2
-         
+            #remove/add item
         elif keyboard.is_pressed('3'):
             mode = 3
-        
+            #create/modify recipe
         elif keyboard.is_pressed('4'):
             mode = 4
         
@@ -332,7 +339,7 @@ def main():
             
             elif mode == 0 :
             
-                print("Hier soll ein Bild hin")
+                print("Warte auf Eingabe")
                 time.sleep(0.5)
         
             else:
