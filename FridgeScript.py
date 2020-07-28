@@ -146,23 +146,36 @@ def removeitem(code):
 
 def createrecipe(code):
     i = 1
+    # open recipe.txt
     recipe_path = '/home/pi/Desktop//recipe.txt'
+    recipe_file = open(recipe_path,'r')
+    # copy content recipe.txt to recipe
     recipe = recipe_file.read()
-    recipe_file.close()                
+    # close recipe.txt
+    recipe_file.close()
+    # open clone.txt
     clone_path = '/home/pi/Desktop//clone.txt'
-    clone_file = open(clone_path,'w')                
+    clone_file = open(clone_path,'w')
+    # write recipe into clone.txt
     clone_file.write(recipe)
     clone_file.write('\n')
+    # write code at end of clone.txt
     clone_file.write(code)
     clone_file.write('\n')
+    # close clone
     clone_file.close()
+    # open clone.txt
     clone_file = open(clone_path,'r')
+    # copy content clone.txt to clone
     clone = clone_file.read()
-    clone_file.close()                
-    recipe_file = open(recipe_path,'w')
-    recipe_file.write(clone)                
+    # close clone.txt
     clone_file.close()
+    # open recipe.txt
+    recipe_file = open(recipe_path,'w')
+    # write clone into recipe.txt
+    recipe_file.write(clone)                
     recipe_file.close()
+    # close recipe.txt
     # solange Zutaten weniger als 10
     if i <= 10 :
         try:
@@ -171,10 +184,12 @@ def createrecipe(code):
         except ingredientname == '' :
             # Solange Zutaten weniger als 10
             while i <= 10 :
-                recipe_path = '/home/pi/Desktop//recipe.txt'
+                # open recipe.txt
+                recipe_file = open(recipe_path,'r')
                 recipe = recipe_file.read()
+                # close recipe.txt
                 recipe_file.close()                
-                clone_path = '/home/pi/Desktop//clone.txt'
+                # open clone.txt
                 clone_file = open(clone_path,'w')                
                 clone_file.write(recipe)
                 clone_file.write('\n')                
@@ -187,10 +202,12 @@ def createrecipe(code):
                 clone_file.close()                
                 clone_file = open(clone_path,'r')
                 clone = clone_file.read()
-                clone_file.close()                
-                recipe_file = open(recipe_path,'w')
-                recipe_file.write(clone)                
+                # close clone.txt
                 clone_file.close()
+                # open recipe.txt
+                recipe_file = open(recipe_path,'w')
+                recipe_file.write(clone)
+                # close recipe.txt
                 recipe_file.close()
                 print('Platzhalter ',i,'in Rezept aufgenommen')
                 i = i + 1
@@ -206,10 +223,12 @@ def createrecipe(code):
             else:
                 ingredientquan = str(ingredientquan_raw)
                 ingredientunit = str(input('Einheit der Zutat? '))
-                recipe_path = '/home/pi/Desktop//recipe.txt'
+                # open recipe.txt
+                recipe_file = open(recipe_path,'r')
                 recipe = recipe_file.read()
-                recipe_file.close()                
-                clone_path = '/home/pi/Desktop//clone.txt'
+                # close recipe.txt
+                recipe_file.close()
+                # open clone.txt
                 clone_file = open(clone_path,'w')                
                 clone_file.write(recipe)
                 clone_file.write('\n')                
@@ -218,14 +237,18 @@ def createrecipe(code):
                 clone_file.write(ingredientquan)
                 clone_file.write('\n')
                 clone_file.write(ingredientunit)
-                clone_file.write('\n')                             
-                clone_file.close()                
+                clone_file.write('\n')
+                # close clone.txt
+                clone_file.close()
+                # open clone.txt
                 clone_file = open(clone_path,'r')
                 clone = clone_file.read()
-                clone_file.close()                
-                recipe_file = open(recipe_path,'w')
-                recipe_file.write(clone)                
+                # close clone.txt
                 clone_file.close()
+                # open recipe.txt
+                recipe_file = open(recipe_path,'w')
+                recipe_file.write(clone)
+                # close recipe.txt
                 recipe_file.close()
                 print(ingredientquan,ingredientunit,' ',ingredientname,' als Zutat aufgenommen')
                 i = i + 1
